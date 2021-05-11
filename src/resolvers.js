@@ -4,7 +4,7 @@ import { ObjectId } from 'mongodb';
 export const resolvers = {
     Query: {
         
-        signups: () => listSignups(),
+        listusers: () => getUsers(),
         messages: () => listMessages(),
         groups: () => listGroups(),
         users: () => listUsers(),
@@ -79,7 +79,7 @@ const Signup = async (input) => {
     return databaseResponse ?? { message: 'something went wrong while signing up' };
 };
 
-const listSignups = () => db.get().collection('signups').find().toArray();
+const getUsers = () => db.get().collection('signups').find().toArray();
 
 // Users
 const createUser = async ({ name, roll, email, password }) => {

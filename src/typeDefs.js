@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server-express';
 export const typeDefs = gql`
     type Query {
-        signups:[Signup!]!
+        listusers:[Signup!]!
         messages:[Message!]!
         groups: [Group!]!
         users: [User!]!
